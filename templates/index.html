@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Healthcare AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>AI Healthcare</title>
 </head>
-<body>
+<body style="text-align:center;font-family:Arial;">
 
-<h1>🏥 AI Healthcare Assistant</h1>
+    <h1>🧠 AI Healthcare Assistant</h1>
 
-<form action="/analyze" method="POST">
-    <input type="text" name="symptoms" placeholder="Enter symptoms..." required>
-    <br><br>
-    <button type="submit">Analyze</button>
-</form>
+    <form action="/analyze" method="post">
+        <input type="text" name="symptoms" placeholder="Enter symptoms" required><br><br>
+        
+        <input type="number" name="age" placeholder="Enter age" required><br><br>
+
+        <button type="submit">Analyze</button>
+    </form>
 
 </body>
 </html>
