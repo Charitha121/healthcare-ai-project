@@ -41,8 +41,7 @@
         }
 
         button {
-            padding: 12px 20px;
-            margin: 10px 5px;
+            padding: 12px 25px;
             background: green;
             color: white;
             border: none;
@@ -53,14 +52,6 @@
 
         button:hover {
             background: darkgreen;
-        }
-
-        .voice-btn {
-            background: #007bff;
-        }
-
-        .voice-btn:hover {
-            background: #0056b3;
         }
 
         img {
@@ -81,27 +72,27 @@
 
     <div class="container">
 
-        <!-- 🤖 Robot -->
+        <!-- 🤖 Robot Doctor -->
         <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Doctor">
 
         <h1>🧠 AI Healthcare Assistant</h1>
 
         <p class="subtitle">
-            Enter or speak your symptoms to get AI-based diagnosis, diet, and medical suggestions
+            Enter your symptoms and age to get AI-based diagnosis, diet, and medical suggestions
         </p>
 
+        <!-- ✅ FORM -->
         <form action="/analyze" method="post">
 
             <label>🩺 Symptoms</label>
             <input 
                 type="text" 
                 name="symptoms" 
-                id="symptoms"
                 placeholder="Example: fever, headache, diabetes, BP, stomach pain" 
                 required
             >
 
-            <label>Age</label>
+            <label>🎂 Age</label>
             <input 
                 type="number" 
                 name="age" 
@@ -110,45 +101,13 @@
                 required
             >
 
-            <br>
+            <br><br>
 
-            <!-- 🎤 Voice Button -->
-            <button type="button" class="voice-btn" onclick="startDictation()">🎤 Speak</button>
-
-            <!-- 🔍 Submit -->
             <button type="submit">🔍 Analyze Health</button>
 
         </form>
 
     </div>
-
-    <!-- 🎤 VOICE SCRIPT -->
-    <script>
-    function startDictation() {
-        if ('webkitSpeechRecognition' in window) {
-            var recognition = new webkitSpeechRecognition();
-            recognition.lang = "en-US";
-            recognition.continuous = false;
-            recognition.interimResults = false;
-
-            recognition.onstart = function() {
-                alert("🎤 Listening... Speak your symptoms");
-            };
-
-            recognition.onresult = function(event) {
-                document.getElementById('symptoms').value = event.results[0][0].transcript;
-            };
-
-            recognition.onerror = function(event) {
-                alert("Error occurred: " + event.error);
-            };
-
-            recognition.start();
-        } else {
-            alert("Voice input not supported in your browser (Use Chrome)");
-        }
-    }
-    </script>
 
 </body>
 </html>
