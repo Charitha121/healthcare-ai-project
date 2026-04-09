@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Healthcare</title>
+    <title>AI Healthcare Assistant</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1588776814546-ec7e9c6c9c4c') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 80px auto;
+            padding: 30px;
+            width: 40%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+
+        img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-<body style="text-align:center;font-family:Arial;">
 
-    <h1>🧠 AI Healthcare Assistant</h1>
+<body>
 
-    <form action="/analyze" method="post">
-        <input type="text" name="symptoms" placeholder="Enter symptoms" required><br><br>
-        
-        <input type="number" name="age" placeholder="Enter age" required><br><br>
+    <div class="container">
 
-        <button type="submit">Analyze</button>
-    </form>
+        <!-- 🤖 Robot Doctor -->
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Doctor">
+
+        <h1>🧠 AI Healthcare Assistant</h1>
+
+        <p class="subtitle">Enter your symptoms and age to get AI-based health suggestions</p>
+
+        <form action="/analyze" method="post">
+            <input type="text" name="symptoms" placeholder="Enter symptoms (e.g., fever, headache)" required><br>
+            
+            <input type="number" name="age" placeholder="Enter age" required><br>
+
+            <button type="submit">🔍 Analyze</button>
+        </form>
+
+    </div>
 
 </body>
 </html>

@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Result</title>
+    <title>AI Diagnosis</title>
+
     <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1588776814546-ec7e9c6c9c4c') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 50px auto;
+            padding: 30px;
+            width: 60%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
         .box {
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             padding: 15px;
             margin: 10px;
             border-radius: 10px;
             background: #f9f9f9;
         }
+
+        img {
+            width: 120px;
+        }
     </style>
+
 </head>
 
-<body style="text-align:center;font-family:Arial;">
+<body>
 
-    <h1>🧠 AI Diagnosis Result</h1>
+    <div class="container">
 
-    <p><b>Symptoms:</b> {{ user_input }}</p>
-    <p><b>Age:</b> {{ age }}</p>
+        <!-- 🤖 Robot Doctor Image -->
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Doctor">
 
-    <div class="box"><b>🔍 Disease:</b> {{ result.disease }}</div>
-    <div class="box"><b>🛡️ Precautions:</b> {{ result.precautions }}</div>
-    <div class="box"><b>💊 Medication:</b> {{ result.medication }}</div>
-    <div class="box"><b>🌿 Ayurvedic:</b> {{ result.ayurvedic }}</div>
-    <div class="box"><b>👨‍⚕️ Doctor:</b> {{ result.doctor }}</div>
-    <div class="box"><b>📌 Advice:</b> {{ result.advice }}</div>
+        <h1>🧠 AI Healthcare Diagnosis</h1>
 
-    <br>
-    <a href="/">🔙 Go Back</a>
+        <p><b>Symptoms:</b> {{ user_input }}</p>
+        <p><b>Age:</b> {{ age }}</p>
+
+        <div class="box"><b>🔍 Disease:</b> {{ result.disease }}</div>
+        <div class="box"><b>🛡️ Precautions:</b> {{ result.precautions }}</div>
+        <div class="box"><b>💊 Medication:</b> {{ result.medication }}</div>
+        <div class="box"><b>🌿 Ayurvedic:</b> {{ result.ayurvedic }}</div>
+        <div class="box"><b>👨‍⚕️ Doctor:</b> {{ result.doctor }}</div>
+        <div class="box"><b>📌 Advice:</b> {{ result.advice }}</div>
+
+        <br>
+        <a href="/">🔙 Go Back</a>
+
+    </div>
 
 </body>
 </html>
