@@ -2,62 +2,53 @@
 <html>
 <head>
     <title>AI Diagnosis</title>
-
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background: url('https://images.unsplash.com/photo-1588776814546-ec7e9c6c9c4c') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            margin: 50px auto;
-            padding: 30px;
-            width: 60%;
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px gray;
-        }
-
-        .box {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px;
-            border-radius: 10px;
-            background: #f9f9f9;
-        }
-
-        img {
-            width: 120px;
-        }
-    </style>
-
 </head>
 
-<body>
+<body style="text-align:center;font-family:Arial;background:#f4f6f9;">
 
-    <div class="container">
+<h1>🧠 AI Healthcare Diagnosis</h1>
 
-        <!-- 🤖 Robot Doctor Image -->
-        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="AI Doctor">
+<p><b>Symptoms:</b> {{ user_input }}</p>
+<p><b>Age:</b> {{ age }}</p>
 
-        <h1>🧠 AI Healthcare Diagnosis</h1>
+<div style="width:60%;margin:auto;">
 
-        <p><b>Symptoms:</b> {{ user_input }}</p>
-        <p><b>Age:</b> {{ age }}</p>
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+🔍 <b>Disease:</b> {{ result.disease }}
+</div>
 
-        <div class="box"><b>🔍 Disease:</b> {{ result.disease }}</div>
-        <div class="box"><b>🛡️ Precautions:</b> {{ result.precautions }}</div>
-        <div class="box"><b>💊 Medication:</b> {{ result.medication }}</div>
-        <div class="box"><b>🌿 Ayurvedic:</b> {{ result.ayurvedic }}</div>
-        <div class="box"><b>👨‍⚕️ Doctor:</b> {{ result.doctor }}</div>
-        <div class="box"><b>📌 Advice:</b> {{ result.advice }}</div>
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+⚠️ <b>Risk Level:</b> {{ result.risk }}
+</div>
 
-        <br>
-        <a href="/">🔙 Go Back</a>
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+🛡️ <b>Precautions:</b> {{ result.precautions }}
+</div>
 
-    </div>
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+💊 <b>Medication:</b> {{ result.medication }}
+</div>
+
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+🌿 <b>Ayurvedic:</b> {{ result.ayurvedic }}
+</div>
+
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+🍎 <b>Diet Plan:</b> {{ result.diet }}
+</div>
+
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+👨‍⚕️ <b>Doctor:</b> {{ result.doctor }}
+</div>
+
+<div style="background:white;padding:15px;margin:10px;border-radius:10px;">
+📌 <b>Advice:</b> {{ result.advice }}
+</div>
+
+</div>
+
+<br>
+<a href="/">🔙 Go Back</a>
 
 </body>
 </html>
